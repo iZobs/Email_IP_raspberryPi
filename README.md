@@ -1,14 +1,19 @@
-#use
-in raspberry pi which runing Raspbian
-$ git glone https://github.com/iZobs/Email_IP_raspberryPi.git
+#USE
+***
+in raspberry pi which runing Raspbian:
 
-$ sudo vim /ect/rc.localadd this "python /home/pi/python/emailIP.py"
+    $git glone https://github.com/iZobs/Email_IP_raspberryPi.git
 
-_IP=$(hostname -I) || true
-if [ "$_IP"  ]; then
-  printf "My IP address is %s\n" "$_IP"
-+ python /home/pi/python/emailIP.py
+    $sudo vim /ect/rc.local add this "python /home/pi/python/emailIP.py"
+- - -
+**/ect.rc.local**
+- - -
+
+    _IP=$(hostname -I) || true
+    if [ "$_IP"  ]; then
+        printf "My IP address is %s\n" "$_IP"
+        python /home/pi/python/emailIP.py
+
     fi
-
-exit 0
+    exit 0
 
